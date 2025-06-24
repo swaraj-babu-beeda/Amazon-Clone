@@ -1,0 +1,97 @@
+.main {
+  max-width: 850px;
+  margin: 90px auto 100px;
+  padding: 0 30px;
+}
+
+.back-to-orders-link {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.delivery-date {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  margin-bottom: 3px;
+}
+
+.product-image {
+  max-width: 150px;
+  max-height: 150px;
+  margin: 25px 0 50px;
+}
+
+.progress-labels-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.current-status {
+  color: rgb(6, 125, 98);
+}
+
+.progress-bar-container {
+  height: 25px;
+  width: 100%;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%; /* Start at 0 for animation */
+  background-color: green;
+  border-radius: 50px;
+  transition: width 1.5s ease-in-out; /* Smooth animation */
+}
+
+/* Progress stages with animation */
+@keyframes progress-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress-stage-1 {
+  width: 20%;
+  animation: progress-animation 1.5s ease-in-out;
+}
+
+.progress-stage-2 {
+  width: 60%;
+  animation: progress-animation 1.5s ease-in-out;
+}
+
+.progress-stage-3 {
+  width: 100%;
+  animation: progress-animation 1.5s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 575px) {
+  .progress-labels-container {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .progress-labels-container {
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+
+  .progress-label {
+    margin-bottom: 3px;
+  }
+}
